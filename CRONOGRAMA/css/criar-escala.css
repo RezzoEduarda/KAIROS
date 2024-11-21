@@ -1,0 +1,183 @@
+/* Estilos principais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #001f54;
+    color: #ffffff;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Layout do conteúdo */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza o conteúdo */
+}
+
+/* Formulário de criação de eventos */
+.event-form {
+    background-color: #003377;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Limite de largura para dispositivos maiores */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.event-form h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.event-form label {
+    display: block;
+    margin-top: 10px;
+    color: #d1d1d1;
+    font-size: 14px;
+}
+
+.event-form input, .event-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px; /* Garantir consistência nas fontes */
+}
+
+/* Ajustes para o botão "Adicionar Evento" */
+.add-button {
+    margin-top: 20px;
+    background-color: #0078d4;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px; /* Tamanho maior e mais equilibrado */
+    width: 100%;
+    max-width: 200px; /* Limite de largura para botões */
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block; /* Faz com que o botão ocupe o espaço da largura definida */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o botão */
+}
+
+.add-button:hover {
+    background-color: #005a8f;
+}
+
+/* Ajustes para o botão "Selecionar Voluntário" */
+select {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Calendário */
+.calendar {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #000;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar .header {
+    font-weight: bold;
+    background-color: #0078d4;
+    color: #fff;
+}
+
+/* Responsividade */
+
+/* Para telas pequenas */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .event-form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(3, 1fr); /* Ajuste no número de colunas para telas menores */
+    }
+}
+
+/* Para dispositivos muito pequenos (celulares) */
+@media screen and (max-width: 480px) {
+    .event-form {
+        padding: 10px;
+    }
+
+    .add-button {
+        width: 90%; /* Maior área de clique em telas pequenas */
+        font-size: 16px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas */
+    }
+
+    .calendar div {
+        font-size: 14px; /* Tamanho de fonte reduzido */
+    }
+}

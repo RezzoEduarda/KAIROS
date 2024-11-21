@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #003d99;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    filter: brightness(0); /* Torna os ícones fora dos botões pretos */
+}
+
+.logo-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #ffffff;
+    color: #003d99;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-button .button-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(29%) sepia(100%) saturate(6046%) hue-rotate(192deg) brightness(88%) contrast(110%);
+    /* Define os ícones dentro dos botões como azuis */
+}
+
+.menu-button:hover {
+    background-color: #e6f0ff;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #005ce6;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #0047b3;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Vermelho escuro */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .home-container {
+        padding: 10px;
+    }
+
+    .menu-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,103 @@
+/* Estilos para a lista de eventos */
+.event-list {
+    background-color: #003377;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.event-list h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.event-item {
+    background-color: #004b8d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.event-item:hover {
+    background-color: #005c9f;
+}
+
+.event-details {
+    font-size: 16px;
+}
+
+.event-details h4 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    margin: 5px 0;
+}
+/* Responsividade */
+
+/* Para telas pequenas (smartphones) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .event-list {
+        padding: 15px;
+    }
+
+    .event-item {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .event-details h4 {
+        font-size: 16px;
+    }
+
+    .event-details p {
+        font-size: 14px;
+    }
+}
+
+/* Para telas muito pequenas (celulares) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .event-list {
+        padding: 10px;
+    }
+
+    .event-item {
+        padding: 10px;
+    }
+
+    .event-details h4 {
+        font-size: 14px;
+    }
+
+    .event-details p {
+        font-size: 12px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    header button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,119 @@
+/* Estilos principais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #001f54;
+    color: #ffffff;
+}
+
+.container {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0078d4;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Cartão de perfil */
+.profile-card {
+    background-color: #003377;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+}
+
+.profile-info {
+    text-align: left;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.profile-info h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Botão de edição */
+.edit-button {
+    background-color: #0078d4;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-info h3 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .edit-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

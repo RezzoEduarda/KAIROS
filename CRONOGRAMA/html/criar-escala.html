@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Eventos</title>
+  <link rel="stylesheet" href="./../css/criar-escala.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <button class="back-button" onclick="window.location.href='home-adm.html'">Voltar</button>
+    <h2>Ministério</h2>
+  </header>
+  <div class="content">
+    <div class="event-form">
+      <h3>Escolher Data</h3>
+      <label for="event-name">Evento</label>
+      <input type="text" id="event-name" placeholder="Nome do evento">
+
+      <label for="event-date">Data</label>
+      <input type="date" id="event-date">
+
+      <label for="event-time">Horário</label>
+      <div class="time-inputs">
+        <input type="time" id="start-time">
+        <span>-</span>
+        <input type="time" id="end-time">
+      </div>
+
+      <label for="volunteer">Voluntário</label>
+      <input type="text" id="volunteer" placeholder="Nome do voluntário">
+
+      <button id="add-event" class="add-button">+</button>
+    </div>
+    <div id="calendar" class="calendar"></div>
+  </div>
+</div>
+<script src="./../scripts/criar-escala.js"></script>
+</body>
+</html>

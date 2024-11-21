@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Cronogramas</title>
+    <link rel="stylesheet" href="./../css/escala.css">
+</head>
+<body>
+
+<div class="calendar-container">
+    <header class="calendar-header">
+        <button class="nav-button" id="prevMonth">❮</button>
+        <h1 id="monthYear"></h1>
+        <button class="nav-button" id="nextMonth">❯</button>
+    </header>
+
+    <div class="calendar-days">
+        <div>Dom</div>
+        <div>Seg</div>
+        <div>Ter</div>
+        <div>Qua</div>
+        <div>Qui</div>
+        <div>Sex</div>
+        <div>Sáb</div>
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid"></div>
+</div>
+
+<!-- Modal para Visualização de Eventos -->
+<div class="modal" id="eventModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2 id="eventDate">Eventos do dia</h2>
+        <div id="eventDetails"></div>
+    </div>
+</div>
+<footer><!-- Botão de Voltar -->
+    <button class="back-button" onclick="window.history.back()">
+        ❮ Voltar
+    </button>
+</footer>
+
+<script src="./../scripts/escala.js"></script>
+</body>
+</html>

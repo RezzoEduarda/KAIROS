@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Kairos</title>
+    <link rel="stylesheet" href="./../css/cadastro.css">
+</head>
+<body>
+<div class="register-container">
+    <div class="register-box">
+        <h1>Cadastro</h1>
+        <form id="registerForm" action="register.php" method="POST">
+            <input type="text" name="nome" id="name" placeholder="Nome" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+
+            <select name="genero" id="genero" required>
+                <option value="">Gênero</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+
+            <select name="ministerio" id="ministerio" required>
+                <option value="">Ministérios</option>
+                <option value="1">Mídia</option>
+                <option value="2">Dança</option>
+                <option value="3">Louvor</option>
+                <option value="4">Kids</option>
+                <option value="5">Atmosfera</option>
+            </select>
+
+
+            <input type="password" name="senha" id="password" placeholder="Senha" required>
+            <input type="password" id="confirmPassword" placeholder="Confirmar senha" required>
+
+            <span id="passwordError" style="color: red; display: none;">As senhas não coincidem.</span>
+
+            <a type="submit" class="register-button" href="./../php/home.php" >Concluir</a>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Validação de senha
+    const registerForm = document.getElementById('registerForm');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const passwordError = document.getElementById('passwordError');
+
+    registerForm.addEventListener('submit', function(event) {
+        if (password.value !== confirmPassword.value) {
+            event.preventDefault(); // Impede o envio do formulário
+            passwordError.style.display = 'block';
+        } else {
+            passwordError.style.display = 'none';
+        }
+    });
+
+    // Mensagem interativa para preenchimento dos campos
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    nameInput.addEventListener('input', function() {
+        nameInput.style.borderColor = nameInput.value ? '#00cc66' : '';
+    });
+
+    emailInput.addEventListener('input', function() {
+        emailInput.style.borderColor = emailInput.value.includes('@') ? '#00cc66' : '#e60000';
+    });
+</script>
+</body>
+</html>
